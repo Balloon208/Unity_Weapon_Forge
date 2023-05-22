@@ -10,9 +10,12 @@ public class SetText : MonoBehaviour
     Sword sword;
 
     // Start is called before the first frame update
-    void Setsword()
+    void Start()
     {
-        sword = GameObject.Find("Sword").GetComponent<Sword>(); // update에서 계속 참조되므로 비효율적임.
+        if (gameObject.CompareTag("SwordText"))
+        {
+            sword = GameObject.Find("Sword").GetComponent<Sword>(); // update에서 계속 참조되므로 비효율적임.
+        }
     }
     // Update is called once per frame
     void Update()
@@ -29,15 +32,12 @@ public class SetText : MonoBehaviour
                 text.text = "성공 확률 : " + ((1000 - UserData.currentswordlevel * 50)/10).ToString() + "%";
                 break;
             case "(Text)SwordName":
-                Setsword();
                 text.text = sword.swordname[UserData.currentswordlevel];
                 break;
             case "(Text)NeedMoney":
-                Setsword();
                 text.text = "필요 코인: " + sword.forgegold[UserData.currentswordlevel].ToString();
                 break;
             case "(Text)SellMoney":
-                Setsword();
                 text.text = "판매가: " + sword.sellgold[UserData.currentswordlevel].ToString();
                 break;
 
