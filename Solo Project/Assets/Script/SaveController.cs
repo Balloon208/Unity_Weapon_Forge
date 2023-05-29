@@ -10,12 +10,14 @@ public class SaveData
     public int gold;
     public int tapgold;
     public int currentswordlevel;
-    public SaveData(string _name, int _gold, int _tapgold, int _currentswordlevel)
+    public int Gsuccesschancelevel;
+    public SaveData(string _name, int _gold, int _tapgold, int _currentswordlevel, int _Gsuccesschancelevel)
     {
         name = _name;
         gold = _gold;
         tapgold = _tapgold;
         currentswordlevel = _currentswordlevel;
+        Gsuccesschancelevel = _Gsuccesschancelevel;
     }
 }
 public static class SaveSystem // save location -> C:\Users\{username}\AppData\LocalLow\{addition_location}
@@ -102,7 +104,7 @@ public class SaveController : MonoBehaviour
 
     void Save()
     {
-        SaveData character = new SaveData(UserData.name, UserData.gold, UserData.tapgold, UserData.currentswordlevel);
+        SaveData character = new SaveData(UserData.name, UserData.gold, UserData.tapgold, UserData.currentswordlevel, UserData.Gsuccesschancelevel);
 
         SaveSystem.Save(character, "playerinfo", useEncryption);
     }
@@ -117,6 +119,7 @@ public class SaveController : MonoBehaviour
             UserData.gold = loadData.gold;
             UserData.tapgold = loadData.tapgold;
             UserData.currentswordlevel = loadData.currentswordlevel;
+            UserData.Gsuccesschancelevel = loadData.Gsuccesschancelevel;
         }
     }
 }
