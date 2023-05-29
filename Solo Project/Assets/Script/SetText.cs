@@ -40,7 +40,9 @@ public class SetText : MonoBehaviour
             case "(Text)SellMoney":
                 text.text = "ÆÇ¸Å°¡: " + sword.sellgold[UserData.currentswordlevel].ToString();
                 break;
-
+            case "GLevel1":
+                text.text = UserData.Gsuccesschancelevel.ToString();
+                break;
         }
     }
 }
