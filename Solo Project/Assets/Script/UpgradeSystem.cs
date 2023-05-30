@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class UpgradeSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    enum MType
     {
-        
+        Gold, SwordStone, DungeonStone
     }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    private MType MaterialType;
+
+    public int[] Cost;
+
+    // Start is called before the first frame update
+    public void Upgrade()
     {
         
     }

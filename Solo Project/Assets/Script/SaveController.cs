@@ -9,14 +9,19 @@ public class SaveData
     public string name;
     public int gold;
     public int tapgold;
+    public int swordstone;
+    public int dungeonstone;
     public int currentswordlevel;
     public int Gsuccesschancelevel;
-    public SaveData(string _name, int _gold, int _tapgold, int _currentswordlevel, int _Gsuccesschancelevel)
+    public SaveData(string _name, int _currentswordlevel, int _gold, int _swordstone, int _dungeonstone, int _tapgold, int _Gsuccesschancelevel)
     {
         name = _name;
+        currentswordlevel = _currentswordlevel;
+
         gold = _gold;
         tapgold = _tapgold;
-        currentswordlevel = _currentswordlevel;
+        swordstone = _swordstone;
+        dungeonstone = _dungeonstone;
         Gsuccesschancelevel = _Gsuccesschancelevel;
     }
 }
@@ -104,7 +109,7 @@ public class SaveController : MonoBehaviour
 
     void Save()
     {
-        SaveData character = new SaveData(UserData.name, UserData.gold, UserData.tapgold, UserData.currentswordlevel, UserData.Gsuccesschancelevel);
+        SaveData character = new SaveData(UserData.name, UserData.currentswordlevel, UserData.gold, UserData.swordstone, UserData.dungeonstone, UserData.tapgold, UserData.Gsuccesschancelevel);
 
         SaveSystem.Save(character, "playerinfo", useEncryption);
     }
@@ -116,9 +121,12 @@ public class SaveController : MonoBehaviour
         {
             Debug.Log(string.Format("LoadData Result => name : {0}, gold : {1} ...etc", loadData.name, loadData.gold));
             UserData.name = loadData.name;
-            UserData.gold = loadData.gold;
-            UserData.tapgold = loadData.tapgold;
             UserData.currentswordlevel = loadData.currentswordlevel;
+
+            UserData.gold = loadData.gold;
+            UserData.swordstone = loadData.swordstone;
+            UserData.dungeonstone = loadData.dungeonstone;
+            UserData.tapgold = loadData.tapgold;
             UserData.Gsuccesschancelevel = loadData.Gsuccesschancelevel;
         }
     }
