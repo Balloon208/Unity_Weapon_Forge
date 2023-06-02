@@ -12,8 +12,8 @@ public class SaveData
     public int swordstone;
     public int dungeonstone;
     public int currentswordlevel;
-    public int Gsuccesschancelevel;
-    public SaveData(string _name, int _currentswordlevel, int _gold, int _swordstone, int _dungeonstone, int _tapgold, int _Gsuccesschancelevel)
+    public int[] Gupgrade = new int[5];
+    public SaveData(string _name, int _currentswordlevel, int _gold, int _swordstone, int _dungeonstone, int _tapgold, int[] _Gupgrade)
     {
         name = _name;
         currentswordlevel = _currentswordlevel;
@@ -22,7 +22,10 @@ public class SaveData
         tapgold = _tapgold;
         swordstone = _swordstone;
         dungeonstone = _dungeonstone;
-        Gsuccesschancelevel = _Gsuccesschancelevel;
+        for(int i=0; i<5; i++)
+        {
+            Gupgrade[i] = _Gupgrade[i];
+        }
     }
 }
 public static class SaveSystem // save location -> C:\Users\{username}\AppData\LocalLow\{addition_location}
@@ -109,7 +112,7 @@ public class SaveController : MonoBehaviour
 
     void Save()
     {
-        SaveData character = new SaveData(UserData.name, UserData.currentswordlevel, UserData.gold, UserData.swordstone, UserData.dungeonstone, UserData.tapgold, UserData.Gsuccesschancelevel);
+        SaveData character = new SaveData(UserData.name, UserData.currentswordlevel, UserData.gold, UserData.swordstone, UserData.dungeonstone, UserData.tapgold, UserData.Gupgrade);
 
         SaveSystem.Save(character, "playerinfo", useEncryption);
     }
@@ -127,7 +130,7 @@ public class SaveController : MonoBehaviour
             UserData.swordstone = loadData.swordstone;
             UserData.dungeonstone = loadData.dungeonstone;
             UserData.tapgold = loadData.tapgold;
-            UserData.Gsuccesschancelevel = loadData.Gsuccesschancelevel;
+            UserData.Gupgrade = loadData.Gupgrade;
         }
     }
 }
