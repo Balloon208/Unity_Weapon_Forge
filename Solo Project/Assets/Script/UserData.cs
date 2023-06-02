@@ -7,5 +7,5 @@ public static class UserData
     public static int tapgold = 1;
     public static int currentswordlevel = 0;
 
-    public static int Gsuccesschancelevel = 0;
+    public static int[] Gupgrade = { 0, 0, 0, 0, 0 };
 }

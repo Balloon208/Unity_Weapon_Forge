@@ -5316,7 +5316,7 @@ GameObject:
   - component: {fileID: 290810316}
   - component: {fileID: 290810315}
   m_Layer: 5
-  m_Name: GLevel2
+  m_Name: GLevel1
   m_TagString: GoldUpgradeUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5410,7 +5410,7 @@ GameObject:
   - component: {fileID: 372762623}
   - component: {fileID: 372762622}
   m_Layer: 5
-  m_Name: GLevel1
+  m_Name: GLevel0
   m_TagString: GoldUpgradeUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11367,8 +11367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6cba83dbab33446b5c9e65414c7411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaterialType: 0
   Cost: 
-  t1: 0
 --- !u!1 &654839495
 GameObject:
   m_ObjectHideFlags: 0
@@ -17121,7 +17121,7 @@ GameObject:
   - component: {fileID: 1167595689}
   - component: {fileID: 1167595688}
   m_Layer: 5
-  m_Name: GLevel3
+  m_Name: GLevel2
   m_TagString: GoldUpgradeUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17215,7 +17215,7 @@ GameObject:
   - component: {fileID: 1256326535}
   - component: {fileID: 1256326534}
   m_Layer: 5
-  m_Name: GLevel4
+  m_Name: GLevel3
   m_TagString: GoldUpgradeUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17594,7 +17594,7 @@ GameObject:
   - component: {fileID: 1437227513}
   - component: {fileID: 1437227512}
   m_Layer: 5
-  m_Name: GLevel5
+  m_Name: 'GLevel4 '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
