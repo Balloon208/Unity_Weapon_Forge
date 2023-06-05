@@ -41,7 +41,19 @@ public class SetText : MonoBehaviour
                 text.text = "ÆÇ¸Å°¡: " + sword.sellgold[UserData.currentswordlevel].ToString();
                 break;
             case "GLevel0":
-                // text.text = UserData.Gupgrade[0].ToString();
+                text.text = UserData.Gupgrade[0].ToString();
+                break;
+            case "GLevel1":
+                text.text = UserData.Gupgrade[1].ToString();
+                break;
+            case "GLevel2":
+                text.text = UserData.Gupgrade[2].ToString();
+                break;
+            case "GLevel3":
+                text.text = UserData.Gupgrade[3].ToString();
+                break;
+            case "GLevel4":
+                text.text = UserData.Gupgrade[4].ToString();
                 break;
         }
     }
