@@ -17,6 +17,14 @@ public class UpgradeSystem : MonoBehaviour
     // Start is called before the first frame update
     public void Upgrade()
     {
+        int number = this.gameObject.name.Split('_')[1][0] -'0';
 
+        if(UserData.gold >= Cost[UserData.Gupgrade[number]])
+        {
+            UserData.gold -= Cost[UserData.Gupgrade[number]];
+            UserData.Gupgrade[number]++;
+
+            Debug.Log(number + " Upgraded to " + UserData.Gupgrade[number]);
+        }
     }
 }
