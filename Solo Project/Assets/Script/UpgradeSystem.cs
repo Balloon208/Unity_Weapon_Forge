@@ -19,12 +19,23 @@ public class UpgradeSystem : MonoBehaviour
     {
         int number = this.gameObject.name.Split('_')[1][0] -'0';
 
-        if(UserData.gold >= Cost[UserData.Gupgrade[number]])
+        switch(MaterialType)
         {
-            UserData.gold -= Cost[UserData.Gupgrade[number]];
-            UserData.Gupgrade[number]++;
+            case MType.Gold:
+                if(UserData.gold >= Cost[UserData.Gupgrade[number]])
+                {
+                    UserData.gold -= Cost[UserData.Gupgrade[number]];
+                    UserData.Gupgrade[number]++;
 
-            Debug.Log(number + " Upgraded to " + UserData.Gupgrade[number]);
+                    Debug.Log(number + " Upgraded to " + UserData.Gupgrade[number]);
+                }
+                break;
+            case MType.SwordStone:
+
+                break;
+            case MType.DungeonStone:
+
+                break;
         }
     }
 }
