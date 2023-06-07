@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -16,7 +17,7 @@ public class SaveData
     public int successball;
     public int removeball;
 
-    public SaveData(string _name, int _currentswordlevel, int _gold, int _swordstone, int _dungeonstone, int _tapgold, int[] _Gupgrade, int _successball, int _removeball)
+    private SaveData(SavaDataBuilder savaDataBuilder)
     {
         name = _name;
         currentswordlevel = _currentswordlevel;
@@ -26,14 +27,73 @@ public class SaveData
         swordstone = _swordstone;
         dungeonstone = _dungeonstone;
 
-        for(int i=0; i<5; i++)
+    public class SavaDataBuilder
+    {
+        public string name;
+        public int gold;
+        public int tapgold;
+        public int swordstone;
+        public int dungeonstone;
+        public int currentswordlevel;
+        public int[] gupgrade = new int[5];
+        public int successball;
+        public int removeball;
+        public SavaDataBuilder Name(string name)
         {
-            Gupgrade[i] = _Gupgrade[i];
+            this.name = name;
+            return this;
         }
-        successball = _successball;
-        removeball = _removeball;
+        public SavaDataBuilder Currentswordlevel(int currentswordlevel)
+        {
+            this.currentswordlevel = currentswordlevel;
+            return this;
+        }
+        public SavaDataBuilder Gold(int gold)
+        {
+            this.gold = gold;
+            return this;
+        }
+        public SavaDataBuilder Swordstone(int swordstone)
+        {
+            this.swordstone = swordstone;
+            return this;
+        }
+        public SavaDataBuilder Dungeonstone(int dungeonstone)
+        {
+            this.dungeonstone = dungeonstone;
+            return this;
+        }
+        public SavaDataBuilder TapGold(int tapgold)
+        {
+            this.tapgold = tapgold;
+            return this;
+        }
+        public SavaDataBuilder Gupgrade(int[] gupgrade)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                this.gupgrade[i] = gupgrade[i];
+            }
+            return this;
+        }
+        public SavaDataBuilder Successball(int successball)
+        {
+            this.successball = successball;
+            return this;
+        }
+        public SavaDataBuilder Removeball(int removeball)
+        {
+            this.removeball = removeball;
+            return this;
+        }
+        public SaveData Build()
+        {
+            return new SaveData(this);
+        }
+
     }
 }
+
 public static class SaveSystem // save location -> C:\Users\{username}\AppData\LocalLow\{addition_location}
 {
     public static string SavePath => Application.persistentDataPath + "/saves/";
@@ -118,9 +178,17 @@ public class SaveController : MonoBehaviour
 
     void Save()
     {
-        SaveData character = new SaveData
-            (UserData.name, UserData.currentswordlevel, UserData.gold, UserData.swordstone, UserData.dungeonstone, 
-            UserData.tapgold, UserData.Gupgrade, UserData.successball, UserData.removeball);
+        SaveData character = new SaveData.SavaDataBuilder()
+            .Name(UserData.name)
+            .Currentswordlevel(UserData.currentswordlevel)
+            .Gold(UserData.gold)
+            .Swordstone(UserData.swordstone)
+            .Dungeonstone(UserData.dungeonstone)
+            .TapGold(UserData.tapgold)
+            .Gupgrade(UserData.Gupgrade)
+            .Successball(UserData.successball)
+            .Removeball(UserData.removeball)
+            .Build();
 
         SaveSystem.Save(character, "playerinfo", useEncryption);
     }
