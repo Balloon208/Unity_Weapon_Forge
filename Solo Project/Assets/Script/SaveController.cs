@@ -19,13 +19,20 @@ public class SaveData
 
     private SaveData(SavaDataBuilder savaDataBuilder)
     {
-        name = _name;
-        currentswordlevel = _currentswordlevel;
+        name = savaDataBuilder.name;
+        currentswordlevel = savaDataBuilder.currentswordlevel;
+        gold = savaDataBuilder.gold;
+        tapgold = savaDataBuilder.tapgold;
+        swordstone = savaDataBuilder.swordstone;
+        dungeonstone = savaDataBuilder.dungeonstone;
 
-        gold = _gold;
-        tapgold = _tapgold;
-        swordstone = _swordstone;
-        dungeonstone = _dungeonstone;
+        for (int i = 0; i < 5; i++)
+        {
+            Gupgrade[i] = savaDataBuilder.gupgrade[i];
+        }
+        successball = savaDataBuilder.successball;
+        removeball = savaDataBuilder.removeball;
+    }
 
     public class SavaDataBuilder
     {
