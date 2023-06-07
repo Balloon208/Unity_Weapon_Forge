@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Sword : MonoBehaviour
 {
     public Sprite[] weapons;
+    public int[] totalball;
     public int[] forgegold;
     public int[] sellgold;
     public string[] swordname;
@@ -30,14 +31,13 @@ public class Sword : MonoBehaviour
     public void UpgradeSword()
     {
         int level = UserData.currentswordlevel;
-        float chance = (1000 - level*50);
 
         if (UserData.gold >= forgegold[level])
         {
             UserData.gold -= forgegold[level];
-            int random = Random.Range(1, 1001);
+            int random = Random.Range(1, totalball[level]);
 
-            if (random <= chance)
+            if (UserData.successball >= random)
             {
                 Debug.Log("강화 성공");
                 level++;
