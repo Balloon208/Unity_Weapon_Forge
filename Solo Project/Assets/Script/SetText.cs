@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using Unity.VisualScripting;
+using System;
 
 public class SetText : MonoBehaviour
 {
@@ -29,7 +30,8 @@ public class SetText : MonoBehaviour
                 text.text = "현재 강화 : " + UserData.currentswordlevel.ToString();
                 break;
             case "(Text)Chance":
-                text.text = "성공 확률 : " + ((1000 - UserData.currentswordlevel * 50)/10).ToString() + "%";
+                double chance = Math.Round((double)UserData.successball / (sword.totalball[UserData.currentswordlevel] - UserData.removeball) *100,1);
+                text.text = "성공 확률 : " + chance.ToString() + "%";
                 break;
             case "(Text)SwordName":
                 text.text = sword.swordname[UserData.currentswordlevel];

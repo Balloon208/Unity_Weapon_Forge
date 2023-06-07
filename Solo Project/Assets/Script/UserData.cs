@@ -4,8 +4,10 @@ public static class UserData
     public static int gold = 0;
     public static int swordstone = 0;
     public static int dungeonstone = 0;
-    public static int tapgold = 1;
+    public static int tapgold = 10;
     public static int currentswordlevel = 0;
+    public static int successball = 1000;
+    public static int removeball = 0;
 
     public static int[] Gupgrade = { 0, 0, 0, 0, 0 };
 }
