@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Sword : MonoBehaviour
 {
     public Sprite[] weapons;
-    public int[] totalball;
+    public int[] baseball;
     public int[] forgegold;
     public int[] sellgold;
     public string[] swordname;
@@ -35,9 +35,9 @@ public class Sword : MonoBehaviour
         if (UserData.gold >= forgegold[level])
         {
             UserData.gold -= forgegold[level];
-            int random = Random.Range(1, totalball[level]);
+            int random = Random.Range(1, baseball[level]+UserData.successball - UserData.removeball);
 
-            if (UserData.successball >= random)
+            if (200 + UserData.successball >= random) //  (기본 공 + 성공 공 개수) >=  총 공의 개수
             {
                 Debug.Log("강화 성공");
                 level++;

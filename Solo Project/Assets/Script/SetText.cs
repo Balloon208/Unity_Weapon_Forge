@@ -30,7 +30,8 @@ public class SetText : MonoBehaviour
                 text.text = "현재 강화 : " + UserData.currentswordlevel.ToString();
                 break;
             case "(Text)Chance":
-                double chance = Math.Round((double)UserData.successball / (sword.totalball[UserData.currentswordlevel] - UserData.removeball) *100,1);
+                // 200 + successball / baseball + successball - removeball
+                double chance = Math.Round((double)(200 + UserData.successball) / (sword.baseball[UserData.currentswordlevel] + UserData.successball - UserData.removeball) *100,1);
                 text.text = "성공 확률 : " + chance.ToString() + "%";
                 break;
             case "(Text)SwordName":
