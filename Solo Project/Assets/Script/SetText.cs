@@ -22,10 +22,10 @@ public class SetText : MonoBehaviour
 
     string findtext(int n)
     {
-        string name = this.gameObject.name.Split('_')[0];
+        string name = "[Button]Upgrade_" + n.ToString();
         upgradeSystem = GameObject.Find(name).GetComponent<UpgradeSystem>();
 
-        return upgradeSystem.Cost[n].ToString();
+        return upgradeSystem.Cost[UserData.Gupgrade[n]].ToString();
     }
     // Update is called once per frame
     void Update()
@@ -61,14 +61,26 @@ public class SetText : MonoBehaviour
             case "GLevel1":
                 text.text = UserData.Gupgrade[1].ToString();
                 break;
+            case "GLevel1_Cost":
+                text.text = "°¡°Ý: " + findtext(1) + "°ñµå";
+                break;
             case "GLevel2":
                 text.text = UserData.Gupgrade[2].ToString();
+                break;
+            case "GLevel2_Cost":
+                text.text = "°¡°Ý: " + findtext(2) + "°ñµå";
                 break;
             case "GLevel3":
                 text.text = UserData.Gupgrade[3].ToString();
                 break;
+            case "GLevel3_Cost":
+                text.text = "°¡°Ý: " + findtext(3) + "°ñµå";
+                break;
             case "GLevel4":
                 text.text = UserData.Gupgrade[4].ToString();
+                break;
+            case "GLevel4_Cost":
+                text.text = "°¡°Ý: " + findtext(4) + "°ñµå";
                 break;
         }
     }
