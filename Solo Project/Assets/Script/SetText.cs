@@ -9,6 +9,7 @@ public class SetText : MonoBehaviour
 {
     public Text text;
     Sword sword;
+    UpgradeSystem upgradeSystem;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,14 @@ public class SetText : MonoBehaviour
         {
             sword = GameObject.Find("Sword").GetComponent<Sword>(); // update에서 계속 참조되므로 비효율적임.
         }
+    }
+
+    string findtext(int n)
+    {
+        string name = "[Button]Upgrade_" + n.ToString();
+        upgradeSystem = GameObject.Find(name).GetComponent<UpgradeSystem>();
+
+        return upgradeSystem.Cost[UserData.Gupgrade[n]].ToString();
     }
     // Update is called once per frame
     void Update()
@@ -46,17 +55,32 @@ public class SetText : MonoBehaviour
             case "GLevel0":
                 text.text = UserData.Gupgrade[0].ToString();
                 break;
+            case "GLevel0_Cost":
+                text.text = "가격: " + findtext(0) + "골드";
+                break;
             case "GLevel1":
                 text.text = UserData.Gupgrade[1].ToString();
+                break;
+            case "GLevel1_Cost":
+                text.text = "가격: " + findtext(1) + "골드";
                 break;
             case "GLevel2":
                 text.text = UserData.Gupgrade[2].ToString();
                 break;
+            case "GLevel2_Cost":
+                text.text = "가격: " + findtext(2) + "골드";
+                break;
             case "GLevel3":
                 text.text = UserData.Gupgrade[3].ToString();
                 break;
+            case "GLevel3_Cost":
+                text.text = "가격: " + findtext(3) + "골드";
+                break;
             case "GLevel4":
                 text.text = UserData.Gupgrade[4].ToString();
+                break;
+            case "GLevel4_Cost":
+                text.text = "가격: " + findtext(4) + "골드";
                 break;
         }
     }
