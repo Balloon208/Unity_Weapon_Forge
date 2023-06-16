@@ -9,6 +9,7 @@ public class SetText : MonoBehaviour
 {
     public Text text;
     Sword sword;
+    UpgradeSystem upgradeSystem;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,14 @@ public class SetText : MonoBehaviour
         {
             sword = GameObject.Find("Sword").GetComponent<Sword>(); // update에서 계속 참조되므로 비효율적임.
         }
+    }
+
+    string findtext(int n)
+    {
+        string name = this.gameObject.name.Split('_')[0];
+        upgradeSystem = GameObject.Find(name).GetComponent<UpgradeSystem>();
+
+        return upgradeSystem.Cost[n].ToString();
     }
     // Update is called once per frame
     void Update()
@@ -45,6 +54,9 @@ public class SetText : MonoBehaviour
                 break;
             case "GLevel0":
                 text.text = UserData.Gupgrade[0].ToString();
+                break;
+            case "GLevel0_Cost":
+                text.text = "가격: " + findtext(0) + "골드";
                 break;
             case "GLevel1":
                 text.text = UserData.Gupgrade[1].ToString();

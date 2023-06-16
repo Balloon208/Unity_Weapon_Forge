@@ -26,6 +26,11 @@ public class UpgradeSystem : MonoBehaviour
                 {
                     UserData.gold -= Cost[UserData.Gupgrade[number]];
                     UserData.Gupgrade[number]++;
+                    if (number==0) // 성공 확률 증가 (공 추가)
+                    {
+                        if (UserData.Gupgrade[0] % 10 == 0 && UserData.Gupgrade[0] != 0) UserData.successball += 64;
+                        else UserData.successball += 32;
+                    }
 
                     Debug.Log(number + " Upgraded to " + UserData.Gupgrade[number]);
                 }
