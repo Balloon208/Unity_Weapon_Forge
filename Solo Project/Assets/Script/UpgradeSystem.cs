@@ -31,6 +31,10 @@ public class UpgradeSystem : MonoBehaviour
                         if (UserData.Gupgrade[0] % 10 == 0 && UserData.Gupgrade[0] != 0) UserData.successball += 64;
                         else UserData.successball += 32;
                     }
+                    if (number == 1) // 판매가격 증가
+                    {
+                        UserData.marginadd += UserData.Gupgrade[1];
+                    }
 
                     Debug.Log(number + " Upgraded to " + UserData.Gupgrade[number]);
                 }

@@ -50,7 +50,7 @@ public class SetText : MonoBehaviour
                 text.text = "필요 코인: " + sword.forgegold[UserData.currentswordlevel].ToString();
                 break;
             case "(Text)SellMoney":
-                text.text = "판매가: " + sword.sellgold[UserData.currentswordlevel].ToString();
+                text.text = "판매가: " + (sword.sellgold[UserData.currentswordlevel] * (100 + UserData.marginadd) / 100).ToString();
                 break;
             case "GLevel0":
                 text.text = UserData.Gupgrade[0].ToString();
