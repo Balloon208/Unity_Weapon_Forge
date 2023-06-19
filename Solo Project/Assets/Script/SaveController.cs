@@ -16,6 +16,7 @@ public class SaveData
     public int[] Gupgrade = new int[5];
     public int successball;
     public int removeball;
+    public int marginadd = 0;
 
     private SaveData(SavaDataBuilder savaDataBuilder)
     {
@@ -45,6 +46,7 @@ public class SaveData
         public int[] gupgrade = new int[5];
         public int successball;
         public int removeball;
+        public int marginadd = 0;
         public SavaDataBuilder Name(string name)
         {
             this.name = name;
@@ -91,6 +93,11 @@ public class SaveData
         public SavaDataBuilder Removeball(int removeball)
         {
             this.removeball = removeball;
+            return this;
+        }
+        public SavaDataBuilder MarginAdd(int marginadd)
+        {
+            this.marginadd = marginadd;
             return this;
         }
         public SaveData Build()
@@ -195,6 +202,7 @@ public class SaveController : MonoBehaviour
             .Gupgrade(UserData.Gupgrade)
             .Successball(UserData.successball)
             .Removeball(UserData.removeball)
+            .MarginAdd(UserData.marginadd)
             .Build();
 
         SaveSystem.Save(character, "playerinfo", useEncryption);

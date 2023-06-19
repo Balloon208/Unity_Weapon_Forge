@@ -8,6 +8,7 @@ public static class UserData
     public static int currentswordlevel = 0;
     public static int successball = 0;
     public static int removeball = 0;
+    public static int marginadd = 0;
 
     public static int[] Gupgrade = { 0, 0, 0, 0, 0 };
 }

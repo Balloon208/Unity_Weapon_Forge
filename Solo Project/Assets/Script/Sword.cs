@@ -60,7 +60,7 @@ public class Sword : MonoBehaviour
     public void SellSword()
     {
         int level = UserData.currentswordlevel;
-        UserData.gold += sellgold[level];
+        UserData.gold += sellgold[level] * (100 + UserData.marginadd) / 100;
 
         Debug.Log("판매 완료");
         level = 0;
