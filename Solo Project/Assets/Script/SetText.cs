@@ -35,6 +35,9 @@ public class SetText : MonoBehaviour
             case "(Text)Coin":
                 text.text = UserData.gold.ToString();
                 break;
+            case "(Text)SwordStone":
+                text.text = UserData.swordstone.ToString();
+                break;
             case "(Text)CurrentForge":
                 text.text = "현재 강화 : " + UserData.currentswordlevel.ToString();
                 break;
