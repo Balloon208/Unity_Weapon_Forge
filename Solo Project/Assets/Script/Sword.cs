@@ -6,10 +6,13 @@ using UnityEngine.UI;
 
 public class Sword : MonoBehaviour
 {
+    public Text text;   
     public Sprite[] weapons;
     public int[] baseball;
     public int[] forgegold;
     public int[] sellgold;
+    public int[] Successswordstone;
+    public int[] Breakswordstone;
     public string[] swordname;
     [SerializeField]
     ParticleSystem Success; //파티클시스템
@@ -40,11 +43,13 @@ public class Sword : MonoBehaviour
             if (200 + UserData.successball >= random) //  (기본 공 + 성공 공 개수) >=  총 공의 개수
             {
                 Debug.Log("강화 성공");
+                UserData.swordstone += Successswordstone[UserData.currentswordlevel];
                 level++;
                 Success.Play();
             }
             else
             {
+                UserData.swordstone += Breakswordstone[UserData.currentswordlevel];
                 level = 0;
                 Fail.Play();
             }
