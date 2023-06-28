@@ -30,61 +30,50 @@ public class SetText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (text.name)
+        if(text.name == "(Text)Coin")
         {
-            case "(Text)Coin":
-                text.text = UserData.gold.ToString();
-                break;
-            case "(Text)SwordStone":
-                text.text = UserData.swordstone.ToString();
-                break;
-            case "(Text)CurrentForge":
-                text.text = "현재 강화 : " + UserData.currentswordlevel.ToString();
-                break;
-            case "(Text)Chance":
-                // 200 + successball / baseball + successball - removeball
-                double chance = Math.Round((double)(200 + UserData.successball) / (sword.baseball[UserData.currentswordlevel] + UserData.successball - UserData.removeball) *100,1);
-                text.text = "성공 확률 : " + chance.ToString() + "%";
-                break;
-            case "(Text)SwordName":
-                text.text = sword.swordname[UserData.currentswordlevel];
-                break;
-            case "(Text)NeedMoney":
-                text.text = "필요 코인: " + sword.forgegold[UserData.currentswordlevel].ToString();
-                break;
-            case "(Text)SellMoney":
-                text.text = "판매가: " + (sword.sellgold[UserData.currentswordlevel] * (100 + UserData.marginadd) / 100).ToString();
-                break;
-            case "GLevel0":
-                text.text = UserData.Gupgrade[0].ToString();
-                break;
-            case "GLevel0_Cost":
-                text.text = "가격: " + findtext(0) + "골드";
-                break;
-            case "GLevel1":
-                text.text = UserData.Gupgrade[1].ToString();
-                break;
-            case "GLevel1_Cost":
-                text.text = "가격: " + findtext(1) + "골드";
-                break;
-            case "GLevel2":
-                text.text = UserData.Gupgrade[2].ToString();
-                break;
-            case "GLevel2_Cost":
-                text.text = "가격: " + findtext(2) + "골드";
-                break;
-            case "GLevel3":
-                text.text = UserData.Gupgrade[3].ToString();
-                break;
-            case "GLevel3_Cost":
-                text.text = "가격: " + findtext(3) + "골드";
-                break;
-            case "GLevel4":
-                text.text = UserData.Gupgrade[4].ToString();
-                break;
-            case "GLevel4_Cost":
-                text.text = "가격: " + findtext(4) + "골드";
-                break;
+            text.text = UserData.gold.ToString();
+        }
+        if (text.name == "(Text)SwordStone")
+        {
+            text.text = UserData.swordstone.ToString();
+        }
+        if (text.name == "(Text)CurrentForge")
+        {
+            text.text = "현재 강화 : " + UserData.currentswordlevel.ToString();
+        }
+        if (text.name == "(Text)Chance")
+        {
+            // 200 + successball / baseball + successball - removeball
+            double chance = Math.Round((double)(200 + UserData.successball) / (sword.baseball[UserData.currentswordlevel] + UserData.successball - UserData.removeball) * 100, 1);
+            text.text = "성공 확률 : " + chance.ToString() + "%";
+        }
+        if (text.name == "(Text)SwordName")
+        {
+            text.text = sword.swordname[UserData.currentswordlevel];
+        }
+        if (text.name == "(Text)NeedMoney")
+        {
+            text.text = "필요 코인: " + sword.forgegold[UserData.currentswordlevel].ToString();
+        }
+        if (text.name == "(Text)SellMoney")
+        {
+            text.text = "판매가: " + (sword.sellgold[UserData.currentswordlevel] * (100 + UserData.marginadd) / 100).ToString();
+        }
+        if(text.name.Contains("GLevel"))
+        {
+            string Replacetext = text.name.Replace("GLevel", "");
+
+            int number = Replacetext[0] - '0';
+
+            if (Replacetext.Contains("_Cost"))
+            {
+                text.text = "가격: " + findtext(number) + "골드";
+            }
+            else
+            {
+                text.text = UserData.Gupgrade[number].ToString();
+            }
         }
     }
 }
