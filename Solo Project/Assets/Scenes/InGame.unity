@@ -14422,10 +14422,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df4d05f17bf574abe2794080978231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Oncolor: {r: 0.7843138, g: 0, b: 1, a: 1}
+  Offcolor: {r: 0.48235297, g: 0.48235297, b: 0.48235297, a: 1}
   UI:
   - {fileID: 274309528}
   - {fileID: 882024580}
   - {fileID: 1484335568}
+  BackgroundObject:
+  - {fileID: 842993314}
+  - {fileID: 684356937}
+  - {fileID: 967309690}
 --- !u!114 &751591594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14447,11 +14453,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.48235297, g: 0.48235297, b: 0.48235297, a: 1}
-    m_HighlightedColor: {r: 0.48235297, g: 0.48235297, b: 0.48235297, a: 1}
-    m_PressedColor: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
-    m_SelectedColor: {r: 0.7856922, g: 0, b: 1, a: 1}
-    m_DisabledColor: {r: 0.48235297, g: 0.48235297, b: 0.48235297, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -14631,10 +14637,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df4d05f17bf574abe2794080978231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Oncolor: {r: 0, g: 0.54901963, b: 1, a: 1}
+  Offcolor: {r: 0.48235297, g: 0.48235297, b: 0.48235297, a: 1}
   UI:
   - {fileID: 274309528}
   - {fileID: 882024580}
   - {fileID: 1484335568}
+  BackgroundObject:
+  - {fileID: 842993314}
+  - {fileID: 684356937}
+  - {fileID: 967309690}
 --- !u!114 &782251270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14656,11 +14668,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.48235297, g: 0.48235297, b: 0.48235297, a: 1}
-    m_HighlightedColor: {r: 0.48235297, g: 0.48235297, b: 0.48235297, a: 1}
-    m_PressedColor: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
-    m_SelectedColor: {r: 0, g: 0.54986143, b: 1, a: 1}
-    m_DisabledColor: {r: 0.48235297, g: 0.48235297, b: 0.48235297, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -21679,10 +21691,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df4d05f17bf574abe2794080978231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Oncolor: {r: 1, g: 1, b: 0, a: 1}
+  Offcolor: {r: 0.48235297, g: 0.48235297, b: 0.48235297, a: 1}
   UI:
   - {fileID: 274309528}
   - {fileID: 882024580}
   - {fileID: 1484335568}
+  BackgroundObject:
+  - {fileID: 842993314}
+  - {fileID: 684356937}
+  - {fileID: 967309690}
 --- !u!114 &1227113876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21704,11 +21722,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.48235297, g: 0.48235297, b: 0.48235297, a: 1}
-    m_HighlightedColor: {r: 0.48235297, g: 0.48235297, b: 0.48235297, a: 1}
-    m_PressedColor: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 0, a: 1}
-    m_DisabledColor: {r: 0.48235297, g: 0.48235297, b: 0.48235297, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -29401,7 +29419,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1711503772}
   - component: {fileID: 1711503773}
-  - component: {fileID: 1711503774}
   m_Layer: 0
   m_Name: ToggleGroup
   m_TagString: Untagged
@@ -29445,20 +29462,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 1
---- !u!114 &1711503774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711503771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df530af7faf78f140ab0bc70280fb43c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentUI: {fileID: 0}
-  AfterUI: {fileID: 0}
 --- !u!1 &1713165146
 GameObject:
   m_ObjectHideFlags: 0
