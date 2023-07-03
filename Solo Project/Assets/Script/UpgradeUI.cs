@@ -13,16 +13,21 @@ public class UpgradeUI : MonoBehaviour
 
     // Update is called once per frame
 
-    public void Start()
+    private void Awake()
     {
-        for(int i=0; i<3; i++)
+        for (int i = 0; i < 3; i++)
         {
             image[i] = BackgroundObject[i].GetComponent<Image>();
         }
+
+        UI[1].SetActive(false);
+        UI[2].SetActive(false);
+        image[1].color = Offcolor;
+        image[2].color = Offcolor;
     }
+
     public void ChangeUI(int n)
     {
-        bool locked = false;
         for(int i = 0; i < 3; i++)
         {
             if (i == n)
