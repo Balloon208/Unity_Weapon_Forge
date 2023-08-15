@@ -5435,8 +5435,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6cba83dbab33446b5c9e65414c7411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaterialType: 0
-  Cost: 50c30000a0860100f049020070820300801a06007082030070820300708203007082030070820300
+  MaterialType: 1
+  Cost: 01000000020000000300000004000000050000007082030070820300708203007082030070820300
 --- !u!114 &135444043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5544,7 +5544,7 @@ GameObject:
   - component: {fileID: 200255522}
   - component: {fileID: 200255521}
   m_Layer: 5
-  m_Name: GLevel3
+  m_Name: SSLevel3
   m_TagString: GoldUpgradeUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6694,7 +6694,7 @@ GameObject:
   - component: {fileID: 316183811}
   - component: {fileID: 316183810}
   m_Layer: 5
-  m_Name: GLevel2
+  m_Name: SSLevel2
   m_TagString: GoldUpgradeUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7367,8 +7367,8 @@ GameObject:
   - component: {fileID: 391911697}
   - component: {fileID: 391911696}
   m_Layer: 5
-  m_Name: GLevel1
-  m_TagString: GoldUpgradeUIText
+  m_Name: SSLevel1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13933,7 +13933,7 @@ GameObject:
   - component: {fileID: 624260094}
   - component: {fileID: 624260093}
   m_Layer: 5
-  m_Name: 'GLevel4 '
+  m_Name: 'SSLevel4 '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20231,7 +20231,7 @@ GameObject:
   - component: {fileID: 873724675}
   - component: {fileID: 873724674}
   m_Layer: 5
-  m_Name: GLevel4_Cost
+  m_Name: SSLevel4_Cost
   m_TagString: GoldUpgradeUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20552,7 +20552,7 @@ GameObject:
   - component: {fileID: 969898962}
   - component: {fileID: 969898961}
   m_Layer: 5
-  m_Name: GLevel2_Cost
+  m_Name: SSLevel2_Cost
   m_TagString: GoldUpgradeUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22830,8 +22830,8 @@ GameObject:
   - component: {fileID: 1426822574}
   - component: {fileID: 1426822573}
   m_Layer: 5
-  m_Name: GLevel1_Cost
-  m_TagString: GoldUpgradeUIText
+  m_Name: SSLevel1_Cost
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36172,8 +36172,8 @@ GameObject:
   - component: {fileID: 2053764290}
   - component: {fileID: 2053764289}
   m_Layer: 5
-  m_Name: GLevel0
-  m_TagString: GoldUpgradeUIText
+  m_Name: SSLevel0
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36452,8 +36452,8 @@ GameObject:
   - component: {fileID: 2109435704}
   - component: {fileID: 2109435703}
   m_Layer: 5
-  m_Name: GLevel0_Cost
-  m_TagString: GoldUpgradeUIText
+  m_Name: SSLevel0_Cost
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36803,7 +36803,7 @@ GameObject:
   - component: {fileID: 2145039773}
   - component: {fileID: 2145039772}
   m_Layer: 5
-  m_Name: GLevel3_Cost
+  m_Name: SSLevel3_Cost
   m_TagString: GoldUpgradeUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -11,4 +11,6 @@ public static class UserData
     public static int marginadd = 0;
 
     public static int[] Gupgrade = { 0, 0, 0, 0, 0 };
+    public static int[] SSupgrade = { 0, 0, 0, 0, 0 };
+    public static int[] DSupgrade = { 0, 0, 0, 0, 0 };
 }

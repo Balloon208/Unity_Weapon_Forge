@@ -40,7 +40,17 @@ public class UpgradeSystem : MonoBehaviour
                 }
                 break;
             case MType.SwordStone:
+                if (UserData.swordstone >= Cost[UserData.SSupgrade[number]])
+                {
+                    UserData.swordstone -= Cost[UserData.SSupgrade[number]];
+                    UserData.SSupgrade[number]++;
+                    if (number == 0) // 실패 확률 감소 (실패 공 감소)
+                    {
+                        UserData.removeball += 16;
+                    }
 
+                    Debug.Log(number + " Upgraded to " + UserData.SSupgrade[number]);
+                }
                 break;
             case MType.DungeonStone:
 

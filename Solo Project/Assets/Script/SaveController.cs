@@ -14,6 +14,8 @@ public class SaveData
     public int dungeonstone;
     public int currentswordlevel;
     public int[] Gupgrade = new int[5];
+    public int[] SSupgrade = new int[5];
+    public int[] DSupgrade = new int[5];
     public int successball;
     public int removeball;
     public int marginadd = 0;
@@ -30,6 +32,8 @@ public class SaveData
         for (int i = 0; i < 5; i++)
         {
             Gupgrade[i] = savaDataBuilder.gupgrade[i];
+            SSupgrade[i] = savaDataBuilder.ssupgrade[i];
+            DSupgrade[i] = savaDataBuilder.dsupgrade[i];
         }
         successball = savaDataBuilder.successball;
         removeball = savaDataBuilder.removeball;
@@ -44,6 +48,8 @@ public class SaveData
         public int dungeonstone;
         public int currentswordlevel;
         public int[] gupgrade = new int[5];
+        public int[] ssupgrade = new int[5];
+        public int[] dsupgrade = new int[5];
         public int successball;
         public int removeball;
         public int marginadd = 0;
@@ -82,6 +88,22 @@ public class SaveData
             for (int i = 0; i < 5; i++)
             {
                 this.gupgrade[i] = gupgrade[i];
+            }
+            return this;
+        }
+        public SavaDataBuilder SSupgrade(int[] ssupgrade)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                this.ssupgrade[i] = ssupgrade[i];
+            }
+            return this;
+        }
+        public SavaDataBuilder DSupgrade(int[] dsupgrade)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                this.dsupgrade[i] = dsupgrade[i];
             }
             return this;
         }
@@ -200,6 +222,8 @@ public class SaveController : MonoBehaviour
             .Dungeonstone(UserData.dungeonstone)
             .TapGold(UserData.tapgold)
             .Gupgrade(UserData.Gupgrade)
+            .SSupgrade(UserData.SSupgrade)
+            .DSupgrade(UserData.DSupgrade)
             .Successball(UserData.successball)
             .Removeball(UserData.removeball)
             .MarginAdd(UserData.marginadd)
@@ -222,6 +246,8 @@ public class SaveController : MonoBehaviour
             UserData.dungeonstone = loadData.dungeonstone;
             UserData.tapgold = loadData.tapgold;
             UserData.Gupgrade = loadData.Gupgrade;
+            UserData.SSupgrade = loadData.SSupgrade;
+            UserData.DSupgrade = loadData.DSupgrade;
             UserData.successball = loadData.successball;
             UserData.removeball = loadData.removeball;
         }

@@ -75,5 +75,35 @@ public class SetText : MonoBehaviour
                 text.text = UserData.Gupgrade[number].ToString();
             }
         }
+        if(text.name.Contains("SSLevel"))
+        {
+            string Replacetext = text.name.Replace("SSLevel", "");
+
+            int number = Replacetext[0] - '0';
+
+            if (Replacetext.Contains("_Cost"))
+            {
+                text.text = "가격: " + findtext(number) + "SwordStone";
+            }
+            else
+            {
+                text.text = UserData.SSupgrade[number].ToString();
+            }
+        }
+        if (text.name.Contains("DSLevel"))
+        {
+            string Replacetext = text.name.Replace("DSLevel", "");
+
+            int number = Replacetext[0] - '0';
+
+            if (Replacetext.Contains("_Cost"))
+            {
+                text.text = "가격: " + findtext(number) + "DungeonStone";
+            }
+            else
+            {
+                text.text = UserData.DSupgrade[number].ToString();
+            }
+        }
     }
 }
